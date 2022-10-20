@@ -1,0 +1,17 @@
+#当前运行的环境
+spring:
+  profiles:
+    active: develop
+#配置springboot上传文件的大小，默认每个文件的配置最大为15mb,单次请求的文件的总数不能大于100mb
+  servlet:
+    multipart:
+      max-file-size: 15MB
+      max-request-size: 100MB
+
+#配置mybatis xml保存路径 - 系统级别的配置
+mybatis:
+  mapper-locations:
+    - classpath:mybatis/**Mapper.xml
+    #classpath 表示根路径resource
+    #mybatis 刚才创建的目录（用来存储xml保存路径）
+    #**Mapper.xml 凡是以这个结尾的文件
